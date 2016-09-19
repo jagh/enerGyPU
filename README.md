@@ -1,7 +1,7 @@
 # enerGyPU
-enerGyPU for monitoring performance and power consumption on Multi-GPU
+enerGyPU "testing" for monitoring performance and power consumption on Multi-GPU
 ----------------------------------------------------------------------------------------
-enerGyPU "testing" version is unstable branch of the master project eea-uis/energypu in git://forge.sc3.uis.edu.co/eea-uis/energypu.git
+"testing" version is unstable branch of the master project eea-uis/energypu in git://forge.sc3.uis.edu.co/eea-uis/energypu.git
 
 ----------------------------------------------------------------------------------------
 
