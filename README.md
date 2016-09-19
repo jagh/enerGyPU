@@ -7,10 +7,10 @@ enerGyPU "testing" for monitoring performance and power consumption on Multi-GPU
 
 enerGyPU is part of the research work Energy Efficient Acceleration of Large-Scale Scientific Applications on Heterogeneous Architectures
 
-John A. García H.(1,2)      (jgarciahenao@acm.org),
-Esteban Hernandez B.(1,3)   (ejhernandezb@udistrital.edu.co),
-Philippe O. A. Navaux(2)    (navaux@inf.ufrgs.br),
-Carlos J. Barrios H.(3)       (cbarrios@uis.edu.co),
+* John A. García H.(1,2)      (jgarciahenao@acm.org),
+* Esteban Hernandez B.(1,3)   (ejhernandezb@udistrital.edu.co),
+* Philippe O. A. Navaux(2)    (navaux@inf.ufrgs.br),
+* Carlos J. Barrios H.(3)       (cbarrios@uis.edu.co),
 
 (1) High Performance and Scientific Computing Center, SC3
     Universidad Industrial de Santander, UIS - Bucaramanga, Colombia
