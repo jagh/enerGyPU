@@ -11,13 +11,17 @@
 # Power consumption, streeming multiprocessor clock and memory clock frequency.
 ###########################################################################
 
+# Execution with enerGyPU_run.sh
+Dir=$1
+ARGV=$2
 
 # Execution in background without enerGyPU_run.sh
-Dir=../testbed/
-HOST=$(hostname)
-DATA=`date +%Y%m%d%H%M`
-APP='test'
-mkdir $Dir/$HOST-$DATA-$APP
+# Dir=../testbed/
+# HOST=$(hostname)
+# APP="matrixMul"
+# DATA=`date +%Y%m%d%H%M`
+# ARGV=$HOST-$APP-$DATA
+# mkdir $Dir/$ARGV
 
 # Identification of the GPU in the machine
 i=0; for id in $(nvidia-smi | grep 0000 | awk '{print $8}'); do GPU[$i]=$id; i=$i+1; done; 
@@ -38,7 +42,7 @@ awk '{if(NR == 1){TIMENV=$6; print "GPU00: " TIMENV "-" '$Time';}
  else if($1 == "SM"&& NR==18) SM=$3;
  else if($1 == "Memory"&& NR==19) MEMORY=$3;
  else if(NR%26 == 0)
- print TIMENV";"GRAPHICS";"SM";"MEMORY";"USED";"FREE";"DRAW >> "'$Dir/$HOST-$DATA-$APP/$HOST-$DATA-$APP-'gpu'${GPU[@]}'.csv"}'
+ print TIMENV";"GRAPHICS";"SM";"MEMORY";"USED";"FREE";"DRAW >> "'$Dir/$ARGV/$ARGV-'gpu'${GPU[@]}'.csv"}'
 
 sleep 0.9s
 done
