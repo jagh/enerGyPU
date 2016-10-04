@@ -29,8 +29,6 @@ mkdir $Dir/$ARGV
 
 # Add path of the application and libraries necessaries
 nvprof --print-gpu-trace -o $Dir/$ARGV/$ARGV-matrixMul.nvprof ./../samples/matrixMul/matrixMul -device=$nGPU -wA=$DIM -wB=$DIM -hA=$DIM -hB=$DIM
-#nvprof --print-gpu-trace $Dir/$ARGV/$ARGV-matrixMul.nvprof
-#nvprof --print-gpu-trace matrixMul.nvprof ./../samples/matrixMul/matrixMul
 
 
 kill %1
