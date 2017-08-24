@@ -30,7 +30,7 @@ echo ${#GPU[@]} : ${GPU[*]};
 if [ ${#GPU[@]} == 1 ]
 then	
 	## Executes the enerGyPU_record.sh
-	./enerGyPU_record-desktop.sh $Dir $ARGV #&
+	./enerGyPU_record-desktop.sh $Dir $ARGV &
 
 elif [ ${#GPU[@]} == 8 ]
 then
@@ -43,7 +43,7 @@ fi
 
 
 ## Add path of the application and libraries necessaries
-#nvprof --print-gpu-trace -o $Dir/$ARGV/$ARGV-matrixMul.nvprof ./../samples/matrixMul/matrixMul -device=$nGPU -wA=$DIM -wB=$DIM -hA=$DIM -hB=$DIM
+nvprof --print-gpu-trace -o $Dir/$ARGV/$ARGV-matrixMul.nvprof ./../samples/matrixMul/matrixMul -device=$nGPU -wA=$DIM -wB=$DIM -hA=$DIM -hB=$DIM
 
 
 kill %1
