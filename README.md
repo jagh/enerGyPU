@@ -1,5 +1,5 @@
 # enerGyPU
-enerGyPU "testing" for monitoring performance and power consumption on Multi-GPU
+enerGyPU for monitoring performance and power consumption on Multi-GPU
 ----------------------------------------------------------------------------------------
 
 enerGyPU is part of the research work Towards a Green Intelligence applied to health care and well-being.
