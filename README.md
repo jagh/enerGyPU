@@ -7,7 +7,9 @@ https://www.ucnlab.eu/en/system/files/fichiers/2016_garcia_henao_frederic_precio
 
 * "testing" version is unstable branch of the master project dIAgnosNet
 
-### Clone a enerGyPUTesting branch
-bash```git clone -b enerGyPUTesting https://github.com/jagh/enerGyPU.git```
-----------------------------------------------------------------------------------------    
+Clone a enerGyPUTesting branch
 
+
+
+
+```git clone -b enerGyPUTesting https://github.com/jagh/enerGyPU.git```
