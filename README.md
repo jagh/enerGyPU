@@ -14,3 +14,6 @@ https://www.ucnlab.eu/en/system/files/fichiers/2016_garcia_henao_frederic_precio
 ### Build a enerGyPUTesting as submodule
 
 ```git submodule add -b enerGyPUTesting https://github.com/jagh/enerGyPU.git```
+
+### Fix a Git detached head in a submodule
+```git checkout enerGyPUTesting```
