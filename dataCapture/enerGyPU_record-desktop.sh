@@ -34,7 +34,7 @@ do
 Time=`date +%s`
 nvidia-smi -q -i ${GPU[*]} -d MEMORY,UTILIZATION,TEMPERATURE,POWER,CLOCK |
 grep -e "Timestamp" -e "MiB" -e "W" -e "MHz" |
-awk '{if(NR == 1){TIMENV=$6; print "GPU00: " TIMENV "-" '$Time';}
+awk '{if(NR == 1){TIMENV=$6;}
       if($1 == "Used" && NR==3) USED=$3; 
  else if($1 == "Free" && NR==4) FREE=$3;
  else if($2 == "Draw" && NR==8) DRAW=$4;
@@ -42,7 +42,7 @@ awk '{if(NR == 1){TIMENV=$6; print "GPU00: " TIMENV "-" '$Time';}
  else if($1 == "SM"&& NR==18) SM=$3;
  else if($1 == "Memory"&& NR==19) MEMORY=$3;
  else if(NR%26 == 0)
- print TIMENV";"'$Time'";"GRAPHICS";"SM";"MEMORY";"USED";"FREE";"DRAW >> "'$Dir/$ARGV/$ARGV-'gpu'${GPU[@]}'.csv"}'
+ print TIMENV";"'$Time'";"GRAPHICS";"SM";"MEMORY";"USED";"FREE";"DRAW >> "'$Dir/$ARGV/$ARGV-'gpu0.csv"}'
 
 sleep 0.9s
 done
