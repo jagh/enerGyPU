@@ -28,9 +28,6 @@ do
 done
 
 
-
-freeGPU=$(head -n 1 availabledevice.txt)
-echo $freeGPU
-
-
-rm "availabledevice.txt"
+##freeGPU=$(head -n 1 availabledevice.txt)
+##echo $freeGPU
+##rm "availabledevice.txt"
