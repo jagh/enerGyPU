@@ -1,4 +1,3 @@
-#!/bin/bash
 
 ###########################################################################
 #                                                                         #
@@ -34,10 +33,8 @@ Time=`date +%s`
 sudo ../enerGyPU/dataCapture/tegrastats |
 awk '{print '$Time'";;"$0 >> "'$Dir/$ARGV/$ARGV'-jetson.txt"}' 
 
-#echo "$(/usr/bin/python -c 'import re; import sys; tegrastats = "Hello"; print tegrastats')"
+echo "$(/usr/bin/python -c 'import re; import sys; tegrastats = "Hello"; print tegrastats')"
 
-
-#mport re
 #string1 = "RAM 1677/8765 CPU [20%1322,10%88756]\r\nRAM 1677/8765 CPU [20%1322,10%88756]"
 #catch = re.findall("RAM \d+/\d+ CPU \[(\d+)%(\d+),\d+%\d+\]", string1)
 #print catch
