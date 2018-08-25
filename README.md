@@ -17,3 +17,6 @@ https://www.ucnlab.eu/en/system/files/fichiers/2016_garcia_henao_frederic_precio
 
 ### Fix a Git detached head in a submodule
 ```git checkout enerGyPUTesting```
+
+### Updated DiagnoseNet to the latest commit on enerGyPUTesting
+```git pull origin enerGyPUTesting```
