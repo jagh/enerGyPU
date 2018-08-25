@@ -20,3 +20,6 @@ https://www.ucnlab.eu/en/system/files/fichiers/2016_garcia_henao_frederic_precio
 
 ### Updated DiagnoseNet to the latest commit on enerGyPUTesting
 ```git pull origin enerGyPUTesting```
+```## Go back to DiagnoseNet directory```
+```git add enerGyPU/```
+```git commit -m "submodule updated"```
