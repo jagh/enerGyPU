@@ -43,9 +43,7 @@ do
 
 Time=`date +%s`
 
-#sudo ./tegrastats |
-#sudo iftop -t -f "host $MASTER" | grep $HOST".unice.fr" |
-sudo iftop -t -f "host $MASTER" | grep -e "Total" | awk '{print '$Time'";;"$0 $1 $2 $3 >> "'$Dir/$ARGV/$ARGV'-bandwidth.txt"}'
+sudo iftop -t -f "host $MASTER" | grep -e "Total" -e "Cumulative" | awk '{print '$Time'";;"$0 >> "'$Dir/$ARGV/$ARGV'-bandwidth.txt"}'
 
 
 #sleep 0.9s
