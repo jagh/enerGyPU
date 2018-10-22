@@ -1,4 +1,4 @@
-# enerGyPU monitor for workload characterization on Multi-GPU
+## enerGyPU monitor for workload characterization on Multi-GPU
 
 enerGyPU main goal is to characterize the workload tasks and improve the balance between performance and energy-efficient.
 enerGyPU is a batch monitor formed by two levels: 
