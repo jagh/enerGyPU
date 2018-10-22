@@ -5,6 +5,14 @@ enerGyPU is a batch monitor formed by two levels:
 1) The firts level automate the nvidia-smi queries to capture the power traces in runtime: in which the main launcher executes the ```energypu_record.sh``` in parallel with the scientific-application and write the GPU architectural factors.
 2) The second level is a data visualization for analyzing the GPU architectural factors and model prediction system (EEA-Aware) for obtaining the optimal computational resources in a stactic time.
 
+## Example of use enerGyPU on multi-GPU node:
+The experimental procedures were executed with aset of test of HPL code variants using 6 GPUs on multi-GPU node:
+<p align="center"><img width="80%" src="dataVisualization/SC16_eneGyPU-guane-626.png" /></p>
+
+## Help
+Start an issue if you find a bug or would like to contribute!
+For other matters, you can contact [@jagh](https://github.com/jagh).
+
 ## Paper
 If you use enerGyPU monitor, please cite [this paper](https://ieeexplore.ieee.org/document/7515761)
 ```
