@@ -1,6 +1,9 @@
 # enerGyPU Monitor for power consumption on Multi-GPU
 
-enerGyPu is a batch monitor formed by two levels: one level to capture data in runtime and a separate level to visualize and traces analyze off-line.
+enerGyPU main goal is to characterize the workload tasks and improve the balance between performance and energy-efficient.
+enerGyPU is a batch monitor formed by two levels: 
+1) The firts level automate the nvidia-smi queries to capture the power traces in runtime: in which the main launcher executes the ```energypu_record.sh``` in parallel with the scientific-application and write the GPU architectural factors.
+2) The second level is a data visualization for analyzing the GPU architectural factors and model prediction system (EEA-Aware) for obtaining the optimal computational resources in a stactic time.
 
 ## Paper
 If you use enerGyPU monitor, please cite [this paper](https://ieeexplore.ieee.org/document/7515761)
