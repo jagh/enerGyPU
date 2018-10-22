@@ -8,8 +8,7 @@ enerGyPU is a batch monitor formed by two levels:
 ## enerGyPU example on multi-GPU node:
 The experimental procedures were executed with aset of test of HPL code variants using 6 GPUs on multi-GPU node.  
 <p align="center"><img width="80%" src="dataVisualization/SC16_eneGyPU-guane-626.png" /></p>
-Work presented on Supercomputer Conference 2016; 
-[EEA-Aware for Large-Scale Scientific Applications on Heterogeneous Architectures](https://www.researchgate.net/publication/307859228_Efficiently_Energetic_Acceleration_EEA-Aware_for_Large-Scale_Scientific_Applications_on_Heterogeneous_Architectures)
+Work presented on Supercomputer Conference 2016; [eGPU for Monitoring Performance and Power Consumption on Multi-GPUs.](https://www.researchgate.net/publication/296531795_enerGyPU_and_enerGyPhi_Monitor_for_Power_Consumption_and_Performance_Evaluation_on_Nvidia_Tesla_GPU_and_Intel_Xeon_Phi)
 
 ## Paper
 If you use enerGyPU monitor, please cite [this paper](https://ieeexplore.ieee.org/document/7515761)
