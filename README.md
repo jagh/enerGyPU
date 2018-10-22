@@ -1,6 +1,15 @@
-# enerGyPU 
-## Monitor for power consumption on Multi-GPU
-----------------------------------------------------------------------------------------
+# enerGyPU Monitor for power consumption on Multi-GPU
+
+
+enerGyPu is a batch monitor formed by two levels: One level to capture data in runtime and a separate level to visualize and traces analyze off-line.
+
+## References
+1) John A. G. Henao, Vıctor M. Abaunza, Philippe O. A. Navaux, Carlos J. B. Hernandez.
+  eGPU for Monitoring Performance and Power Consumption on Multi-GPUs. | Request PDF. Available from: https://www.researchgate.net/publication/296699959_eGPU_for_Monitoring_Performance_and_Power_Consumption_on_Multi-GPUs [accessed Oct 22 2018].
+
+
+
+
 "testing" version is unstable branch of the master project eea-uis/energypu in git://forge.sc3.uis.edu.co/eea-uis/energypu.git
 
 ----------------------------------------------------------------------------------------
