@@ -1,9 +1,9 @@
 #!/bin/bash
 
 ###########################################################################
-#									  #
+#																			#
 # enerGyPU for monitoring performance and power consumption on Multi-GPU  #
-#		                                                          #
+#																			#
 ###########################################################################				
 
 # enerGyPU_record.sh
@@ -29,7 +29,7 @@ echo ${#GPU[@]} : ${GPU[*]};
 
 ## Recording data while the application is running
 for gpu in $(seq 1 ${#GPU[@]}); do
-    nvidia-smi -i ${GPU[$(($gpu - 1))]} --query-gpu=timestamp,pstate,clocks.sm,clocks.mem,memory.total,memory.used,memory.free,power.draw,utilization.gpu,utilization.memory,temperature.gpu,pcie.link.gen.max,pcie.link.gen.current --format=csv,noheader,nounits -lms 1000 >> $Dir/$ARGV/$ARGV-"gpu"$(($gpu - 1))".csv" &
+    nvidia-smi -i ${GPU[$(($gpu - 1))]} --query-gpu=timestamp,pstate,clocks.sm,clocks.mem,memory.total,memory.used,memory.free,power.draw,utilization.gpu,utilization.memory,temperature.gpu,pcie.link.gen.max,pcie.link.gen.current --format=csv,noheader,nounits -lms 1000 >> $Dir/$ARGV-"gpu"$(($gpu - 1))".csv" &
 done
 
 
