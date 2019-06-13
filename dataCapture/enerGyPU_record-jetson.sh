@@ -1,13 +1,20 @@
-
+#!/bin/sh
 ###########################################################################
-#                                                                         #
-# enerGyPU for monitoring performance and power consumption on Multi-GPU  #
-#                                                                         #
+##                                                                         #
+## enerGyPU for monitoring performance and power consumption on Multi-GPU  #
+##                                                                         #
 ###########################################################################
 
-# enerGyPU_record for Jetson TX2
-# Data extration and write one separate file for each GPU on "testbed":
-# Power consumption, streeming multiprocessor clock and memory clock frequency.
+## enerGyPU_record for Jetson TX2
+## Data extration and write one separate file for each GPU on "testbed":
+## Power consumption, streeming multiprocessor clock and memory clock frequency.
+
+## This script requires not password for sudo, 
+## Adding the following lineas on /etc/sudores:
+## sudo visudo
+## $user ALL = NOPASSWD: /home/$user/enerGyPU/dataCapture/tegrastats
+## $user ALL = NOPASSWD: /usr/bin/killall
+## $user ALL = NOPASSWD: /usr/sbin/iftop
 #####################################################################
 
 
@@ -15,8 +22,12 @@
 Dir=$1
 ARGV=$2
 
+## Local variables 
+HOST=$(hostname)
+Time=`date +%s`
+
 ## Execution in background without enerGyPU_run.sh
-#Dir=../testbed/
+#Dir=cloud/Version1/enerGyPU/testbed/	#../testbed/
 #HOST=$(hostname)
 #APP="matrixMul"
 #DATA=`date +%Y%m%d%H%M`
@@ -24,16 +35,12 @@ ARGV=$2
 #mkdir $Dir/$ARGV
 
 ## Recording data while the application is running
-while true
-do
+#while true; do
 
-Time=`date +%s`
+sudo ./cloud/Version1/enerGyPU/dataCapture/tegrastats  |
+awk '{print '$Time'";;"$0 >> "'$Dir/$ARGV/$HOST-$ARGV'-jetson.txt"}' 
 
-#sudo ./tegrastats |
-sudo ../enerGyPU/dataCapture/tegrastats |
-awk '{print '$Time'";;"$0 >> "'$Dir/$ARGV/$ARGV'-jetson.txt"}' 
-
-echo "$(/usr/bin/python -c 'import re; import sys; tegrastats = "Hello"; print tegrastats')"
+#echo "$(/usr/bin/python -c 'import re; import sys; tegrastats = "Hello"; print tegrastats')"
 
 #string1 = "RAM 1677/8765 CPU [20%1322,10%88756]\r\nRAM 1677/8765 CPU [20%1322,10%88756]"
 #catch = re.findall("RAM \d+/\d+ CPU \[(\d+)%(\d+),\d+%\d+\]", string1)
@@ -52,4 +59,4 @@ echo "$(/usr/bin/python -c 'import re; import sys; tegrastats = "Hello"; print t
 # print TIMENV";"'$Time'";"GRAPHICS";"SM";"MEMORY";"USED";"FREE";"DRAW >> "'$Dir/$ARGV/$ARGV-'gpu0.csv"}'
 
 #sleep 0.9s
-done
+#done
