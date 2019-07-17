@@ -17,15 +17,15 @@
 ## $user ALL = NOPASSWD: /usr/sbin/iftop
 #####################################################################
 
-
 ## Execution with enerGyPU_run.sh
 Dir=$1
 ARGV=$2
-
+ADDPATH=$3
 ## Local variables 
 HOST=$(hostname)
 Time=`date +%s`
-
+EXEC="enerGyPU/dataCapture/tegrastats"
+ARGS="./"
 ## Execution in background without enerGyPU_run.sh
 #Dir=cloud/Version1/enerGyPU/testbed/	#../testbed/
 #HOST=$(hostname)
@@ -37,8 +37,8 @@ Time=`date +%s`
 ## Recording data while the application is running
 #while true; do
 
-sudo ./cloud/Version1/enerGyPU/dataCapture/tegrastats  |
-awk '{print '$Time'";;"$0 >> "'$Dir/$ARGV/$HOST-$ARGV'-jetson.txt"}' 
+sudo $ARGS$ADDPATH$EXEC  |
+awk '{print '$Time'";;"$0 >> "'$Dir/$HOST-$ARGV'-jetson.txt"}' &  
 
 #echo "$(/usr/bin/python -c 'import re; import sys; tegrastats = "Hello"; print tegrastats')"
 
