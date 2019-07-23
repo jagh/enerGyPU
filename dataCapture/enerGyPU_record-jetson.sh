@@ -21,11 +21,13 @@
 Dir=$1
 ARGV=$2
 ADDPATH=$3
+
 ## Local variables 
 HOST=$(hostname)
 Time=`date +%s`
 EXEC="enerGyPU/dataCapture/tegrastats"
-ARGS="./"
+ARGS=""	#"./"
+
 ## Execution in background without enerGyPU_run.sh
 #Dir=cloud/Version1/enerGyPU/testbed/	#../testbed/
 #HOST=$(hostname)
@@ -37,6 +39,7 @@ ARGS="./"
 ## Recording data while the application is running
 #while true; do
 
+#sudo /home/mpiuser/cloud/diagnosenet/enerGyPU/dataCapture/tegrastats
 sudo $ARGS$ADDPATH$EXEC  |
 awk '{print '$Time'";;"$0 >> "'$Dir/$HOST-$ARGV'-jetson.txt"}' &  
 
