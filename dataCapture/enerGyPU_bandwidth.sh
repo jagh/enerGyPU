@@ -1,4 +1,4 @@
-
+#!/bin/sh
 ###########################################################################
 #                                                                         #
 # enerGyPU for monitoring performance and power consumption on Multi-GPU  #
@@ -44,9 +44,8 @@ HOST=$(hostname)
 #Time=`date +%s`
 #sudo iftop -t -f "host $MASTER" | grep -e "Total" -e "Cumulative" | awk '{print '$Time'";;"$0 >> "'$Dir/$ARGV/$HOST-$ARGV'-bandwidth.txt"}'
 
-
-sudo iftop -t -f "host $MASTER" | grep -e "Total" -e "Cumulative" |
- awk '{print $0 >> "'$Dir/$ARGV/$HOST-$ARGV'-bandwidth.txt"}'
+Time=`date +%s`
+sudo iftop -t -f "host $MASTER" | grep -e "Total" -e "Cumulative" | awk '{print '$Time'";;"$0 >> "'$Dir/$HOST-$ARGV'-bandwidth.txt"}' &
 
 
 #sleep 0.9s
